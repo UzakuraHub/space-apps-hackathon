@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Covid 19 Risk Calculate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| Information                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                 Figma                                                                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| This is a space apps api to solve a challenge with many risks occurring with Covid-19 and it is intended to calculate the risks and provide tips on how to stay safe.<br><br>The uzakura-team currently consists of 2 people working hard to keep this up and running, but we are also relying on alot of open-source projects! Checkout what we are trying to achieve | [![Figma Prototype](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/50px-Figma-logo.svg.png)](https://www.figma.com/proto/eMY5pK7kBPjg6LbgJteidO/space-apps?node-id=14%3A83&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A83) |
 
-## Available Scripts
+**Check out** our [prototype](https://www.figma.com/proto/eMY5pK7kBPjg6LbgJteidO/space-apps?node-id=14%3A83&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A83) to have a glance on our solution and what we are trying to achieve
 
-In the project directory, you can run:
+# Installation
 
-### `yarn start`
+### Prerequesites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Download nodeJS using https://nodejs.
+2. Global yarn installation with `npm install --global yarn`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Project
 
-### `yarn test`
+1. Fork and clone the git repository
+2. Run `yarn` to install the packages
+3. In another window run `yarn run start`
+4. Open your browser and navigate to `localhost:3000` (if it doesn't run right away.)
+5. You should now see the login page now.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Showcases (Live PWA Link)
 
-### `yarn build`
+Did you check out [the figma prototype](https://www.figma.com/proto/eMY5pK7kBPjg6LbgJteidO/space-apps?node-id=14%3A83&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A83)?
+This is how far we are as per the api [live link](https://covid-risk-space.netlify.app) and use the referenced prototype for guidance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Sources:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> https://uzakura.herokuapp.com/api
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> https://documenter.getpostman.com/view/11144369/Szf6Z9B3?version=latest#ad1d0096-3390-462d-896c-5817101a7adf
 
-### `yarn eject`
+> https://www.worldometers.info/coronavirus/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> https://github.com/nytimes/covid-19-data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> https://github.com/ActiveConclusion/COVID19_mobility
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html
 
-## Learn More
+> https://github.com/pcm-dpc/COVID-19
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Situationsberichte/Gesamt.html
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> https://info.gesundheitsministerium.at/
 
-### Code Splitting
+> https://www.mohfw.gov.in/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> https://covid19.ncdc.gov.ng/
 
-### Analyzing the Bundle Size
+> https://github.com/openZH/covid_19/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> https://coronavirus.data.gov.uk
 
-### Making a Progressive Web App
+> https://covid19.go.id
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> https://datadashboard.health.gov.il/COVID-19/general
 
-### Advanced Configuration
+# Contributors ✨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Thanks goes to these wonderful people:
 
-### Deployment
+- Nsabimana Issa ([Github](https://github.com/mansurissa))
+- Habiyaremye Ntwali Janvier ([Github](https://github.com/redjanvier))
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# License
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT - 2021
