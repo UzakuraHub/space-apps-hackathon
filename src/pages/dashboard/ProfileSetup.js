@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SelectCountry from './SelectCountry';
+import SelectCountry from '../../components/SelectCountry';
 import {
   Box,
   Button,
@@ -19,7 +19,7 @@ const ProfileSetup = () => {
   const handleImage = (e) => {
     setImage({
       preview: URL.createObjectURL(e.target.files[0]),
-      raw: e.target.files[0]
+      raw: e.target.files[0],
     });
   };
 

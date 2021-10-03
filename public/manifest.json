@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Covid 19 Risk Calculate",
+  "name": "This is a space apps challenge intended to calculate risks of covid 19 and provide tips on how to stay safe",
   "icons": [
     {
       "src": "favicon.ico",
