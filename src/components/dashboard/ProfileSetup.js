@@ -1,19 +1,28 @@
+import React, { useState } from 'react';
+import SelectCountry from './SelectCountry';
 import {
   Box,
   Button,
   Container,
   FormControl,
-  InputAdornment,
   InputLabel,
   MenuItem,
-  OutlinedInput,
   Select,
   TextField
 } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
 import Profile from '../../assets/profile.jpg';
 
-const profileSetup = () => {
+const ProfileSetup = () => {
+  const [selected, setSelected] = useState('');
+  const [image, setImage] = useState({ preview: '', raw: '' });
+
+  const handleImage = (e) => {
+    setImage({
+      preview: URL.createObjectURL(e.target.files[0]),
+      raw: e.target.files[0]
+    });
+  };
+
   return (
     <div className='mt-3'>
       <Container maxWidth='sm'>
@@ -29,9 +38,16 @@ const profileSetup = () => {
             Profile Setup
           </Box>
           <img
-            src={Profile}
+            src={image.preview ? image.preview : Profile}
             alt='proffile'
             style={{ height: '150px', width: '150px', borderRadius: '200px' }}
+          />
+          <input
+            accept='image/*'
+            id='contained-button-file'
+            multiple
+            type='file'
+            onChange={handleImage}
           />
         </div>
         <div>
@@ -44,20 +60,7 @@ const profileSetup = () => {
             fullWidth
           />
         </div>
-        <FormControl variant='outlined' fullWidth>
-          <InputLabel htmlFor='outlined-adornment-password'>
-            Find Location
-          </InputLabel>
-          <OutlinedInput
-            id='outlined-adornment-password'
-            endAdornment={
-              <InputAdornment position='end'>
-                <Search />
-              </InputAdornment>
-            }
-            label='Location'
-          />
-        </FormControl>
+        <SelectCountry setSelected={setSelected} selected={selected} />
         <FormControl fullWidth>
           <InputLabel id='demo-simple-select-label'>
             Prefered Language
@@ -85,4 +88,4 @@ const profileSetup = () => {
   );
 };
 
-export default profileSetup;
+export default ProfileSetup;
