@@ -4,7 +4,7 @@
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | This is a space apps api to solve a challenge with many risks occurring with Covid-19 and it is intended to calculate the risks and provide tips on how to stay safe.<br><br>The uzakura-team currently consists of 2 people working hard to keep this up and running, but we are also relying on alot of open-source projects! Checkout what we are trying to achieve | [![Figma Prototype](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/50px-Figma-logo.svg.png)](https://www.figma.com/proto/eMY5pK7kBPjg6LbgJteidO/space-apps?node-id=14%3A83&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A83) |
 
-**Check out** our [prototype](https://www.figma.com/proto/eMY5pK7kBPjg6LbgJteidO/space-apps?node-id=14%3A83&scaling=scale-down&page-id=0%3A1&starting-point-node-id=14%3A83) to have a glance on our solution and what we are trying to achieve
+**Check out** our [api repository](https://github.com/UzakuraHub/space-apps-hackathon-api) to have a glance on the source of our data and how we are compiling all resources provided by Nasa Apps.
 
 # Installation
 
