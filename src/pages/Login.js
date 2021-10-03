@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextField, Button, Box, Container } from '@material-ui/core';
 import LoginIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -40,6 +41,7 @@ const Login = () => {
             startIcon={<LoginIcon />}
             fullWidth
             size='large'
+            style={{ backgroundColor: '#6200EE', color: '#FFFFFF' }}
           >
             LOGIN
           </Button>
@@ -48,9 +50,11 @@ const Login = () => {
           Or
         </Box>
         <div>
-          <Button variant='outlined' fullWidth size='large'>
-            REGISTER
-          </Button>
+          <Link to='/register'>
+            <Button variant='outlined' fullWidth size='large'>
+              REGISTER
+            </Button>
+          </Link>
         </div>
       </Container>
     </div>
