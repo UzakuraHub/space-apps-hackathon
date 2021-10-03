@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
 import SelectCountry from '../../components/SelectCountry';
 import {
   Box,
   Button,
-  Container,
   FormControl,
   InputLabel,
   MenuItem,
@@ -13,6 +13,12 @@ import {
 import Profile from '../../assets/profile.jpg';
 
 const ProfileSetup = () => {
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    password: '',
+    language: '',
+  });
   const [selected, setSelected] = useState('');
   const [image, setImage] = useState({ preview: '', raw: '' });
 
@@ -23,9 +29,24 @@ const ProfileSetup = () => {
     });
   };
 
+  React.useEffect(() => {
+    const prevInfo = JSON.parse(localStorage.getItem('RegInfo'));
+    setUser({ ...user, ...prevInfo });
+  }, []);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const body = {
+      ...user,
+      location: selected.name,
+      image: image.raw,
+    };
+    console.log(body);
+  };
+
   return (
     <div className='mt-3'>
-      <Container maxWidth='sm'>
+      <form onSubmit={handleRegister}>
         <div style={{ width: '40%', margin: 'auto' }}>
           <Box
             sx={{
@@ -47,6 +68,7 @@ const ProfileSetup = () => {
             id='contained-button-file'
             multiple
             type='file'
+            required
             onChange={handleImage}
           />
         </div>
@@ -55,7 +77,10 @@ const ProfileSetup = () => {
             id='outlined-basic'
             label='Full Name'
             variant='outlined'
+            value={user.name}
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
             type='text'
+            required
             margin='normal'
             fullWidth
           />
@@ -65,16 +90,23 @@ const ProfileSetup = () => {
           <InputLabel id='demo-simple-select-label'>
             Prefered Language
           </InputLabel>
-          <Select labelId='demo-simple-select-label' id='demo-simple-select'>
-            <MenuItem value={'English'}>English</MenuItem>
-            <MenuItem value={'French'}>French</MenuItem>
-            <MenuItem value={'Swahili'}>Swahili</MenuItem>
+          <Select
+            required
+            onChange={(e) => setUser({ ...user, language: e.target.value })}
+            labelId='demo-simple-select-label'
+            id='demo-simple-select'
+          >
+            <MenuItem value={'en_us'}>English</MenuItem>
+            <MenuItem value={'fr_FR'}>French</MenuItem>
+            <MenuItem value={'swa_KE'}>Swahili</MenuItem>
+            <MenuItem value={'kinya_RWA'}>Kinyarwanda</MenuItem>
           </Select>
         </FormControl>
         <Button
           variant='contained'
           fullWidth
           size='large'
+          type='submit'
           style={{
             backgroundColor: '#6200EE',
             color: '#FFFFFF',
@@ -83,7 +115,7 @@ const ProfileSetup = () => {
         >
           Finish
         </Button>
-      </Container>
+      </form>
     </div>
   );
 };

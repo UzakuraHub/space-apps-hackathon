@@ -1,17 +1,33 @@
 import React from 'react';
-import { TextField, Button, Box, Container } from '@material-ui/core';
+import { TextField, Button, Box } from '@material-ui/core';
 import LoginIcon from '@material-ui/icons/AccountCircle';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Register = () => {
+  const history = useHistory();
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const prevInfo = {
+      name,
+      email,
+      password,
+    };
+    localStorage.setItem('RegInfo', JSON.stringify(prevInfo));
+    history.push('/profileSetup');
+  };
+
   return (
     <div className='mt-10'>
-      <Container maxWidth='sm'>
+      <form onSubmit={handleSubmit}>
         <Box
           sx={{
             textAlign: 'center',
             fontSize: '32px',
-            fontWeight: 'bold'
+            fontWeight: 'bold',
           }}
         >
           REGISTER
@@ -22,8 +38,11 @@ const Register = () => {
             label='Full name'
             variant='outlined'
             type='text'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             margin='normal'
             fullWidth
+            required
           />
         </div>
         <div>
@@ -32,7 +51,10 @@ const Register = () => {
             label='Email'
             margin='normal'
             variant='outlined'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             type='email'
+            required
             fullWidth
           />
         </div>
@@ -42,7 +64,10 @@ const Register = () => {
             label='Password'
             variant='outlined'
             type='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             margin='normal'
+            required
             fullWidth
           />
         </div>
@@ -53,6 +78,7 @@ const Register = () => {
             fullWidth
             margin='normal'
             size='large'
+            type='submit'
             style={{ backgroundColor: '#6200EE', color: '#FFFFFF' }}
           >
             REGISTER
@@ -63,12 +89,12 @@ const Register = () => {
         </Box>
         <div>
           <Link to='/login'>
-            <Button variant='outlined' fullWidth size='large'>
+            <Button type='button' variant='outlined' fullWidth size='large'>
               LOGIN
             </Button>
           </Link>
         </div>
-      </Container>
+      </form>
     </div>
   );
 };
