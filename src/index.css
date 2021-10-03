@@ -14,3 +14,9 @@ code {
 .mt-10 {
   margin-top: 10rem;
 }
+.Button {
+  color: rgb(156, 63, 63);
+}
+a {
+  text-decoration: none;
+}

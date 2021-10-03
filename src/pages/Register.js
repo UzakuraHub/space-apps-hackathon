@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextField, Button, Box, Container } from '@material-ui/core';
 import LoginIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   return (
@@ -52,6 +53,7 @@ const Register = () => {
             fullWidth
             margin='normal'
             size='large'
+            style={{ backgroundColor: '#6200EE', color: '#FFFFFF' }}
           >
             REGISTER
           </Button>
@@ -60,9 +62,11 @@ const Register = () => {
           Or
         </Box>
         <div>
-          <Button variant='outlined' fullWidth size='large'>
-            LOGIN
-          </Button>
+          <Link to='/login'>
+            <Button variant='outlined' fullWidth size='large'>
+              LOGIN
+            </Button>
+          </Link>
         </div>
       </Container>
     </div>
