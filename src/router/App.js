@@ -1,15 +1,15 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Dashboard from '../components/dashboard/Dashboard';
-import profileSetup from '../components/dashboard/ProfileSetup';
-import Settings from '../components/dashboard/Settings';
-import UpdateProfile from '../components/dashboard/UpdateProfile';
-import Warnings from '../components/dashboard/Warnings';
+import Dashboard from '../pages/dashboard/Dashboard';
+import profileSetup from '../pages/dashboard/ProfileSetup';
+import Settings from '../pages/dashboard/Settings';
+import UpdateProfile from '../pages/dashboard/UpdateProfile';
+import Warnings from '../pages/dashboard/Warnings';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 
 const App = () => {
   return (
-    <div>
+    <div style={{ minHeight: '100vh' }}>
       <Router>
         <Switch>
           <Route path='/' exact component={Login} />

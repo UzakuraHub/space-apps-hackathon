@@ -1,5 +1,10 @@
-body {
+* {
+  box-sizing: border-box !important;
+  padding: 0;
   margin: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -41,4 +46,27 @@ a {
   width: 100%;
   padding: 0.6rem;
   margin-right: 1rem;
+}
+.card {
+  border-radius: 5px;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 10px #ccc;
+  min-width: 300px;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.section {
+  margin: 2rem 0;
+}
+.section h4 {
+  color: #7e7e7e;
+  font-size: 16px;
+  font-weight: 600;
 }

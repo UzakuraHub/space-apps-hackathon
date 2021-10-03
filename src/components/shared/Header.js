@@ -1,7 +1,7 @@
 import { Box, Button } from '@material-ui/core';
 import Profile from '../../assets/profile.jpg';
 
-const Header = () => {
+const Header = ({ name, location }) => {
   return (
     <div className='flex mt-3'>
       <div className='flex ' style={{ width: '100%' }}>
@@ -18,19 +18,19 @@ const Header = () => {
             sx={{
               textAlign: 'left',
               fontSize: '20px',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
             }}
           >
-            Hi, Jane!
+            Hi, {name.split(' ')[0] || ''}!
           </Box>
           <Box
             sx={{
               textAlign: 'left',
               fontSize: '12px',
-              fontWeight: 'semibold'
+              fontWeight: 'semibold',
             }}
           >
-            Location Kigali, Rwanda
+            Location: <span style={{ fontWeight: 'bold' }}>{location || ''}</span>
           </Box>
         </div>
       </div>
@@ -42,7 +42,7 @@ const Header = () => {
           backgroundColor: '#6200EE',
           color: '#FFFFFF',
           width: '55%',
-          marginLeft: '14px'
+          marginLeft: '14px',
         }}
       >
         + NEW TRIP

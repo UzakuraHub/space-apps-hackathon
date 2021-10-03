@@ -8,7 +8,7 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-  TextField
+  TextField,
 } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import Profile from '../../assets/profile.jpg';
@@ -23,7 +23,7 @@ const profileSetup = () => {
               textAlign: 'left',
               fontSize: '20px',
               fontWeight: 'bold',
-              marginBottom: '24px'
+              marginBottom: '24px',
             }}
           >
             Profile Setup
@@ -75,7 +75,7 @@ const profileSetup = () => {
           style={{
             backgroundColor: '#6200EE',
             color: '#FFFFFF',
-            marginTop: '34px'
+            marginTop: '34px',
           }}
         >
           Finish

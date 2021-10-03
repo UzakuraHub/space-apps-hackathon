@@ -1,0 +1,14 @@
+.slide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slide::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal {
+  width: 100vw;
+  overflow-y: scroll;
+  display: flex;
+}
