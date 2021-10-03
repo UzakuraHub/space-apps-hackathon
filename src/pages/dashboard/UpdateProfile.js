@@ -11,12 +11,21 @@ import {
   TextField
 } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Profile from '../../assets/profile.jpg';
 
 // import BackIcon from '../../assets/backIcon.svg';
 
 const UpdateProfile = () => {
+  const [image, setImage] = useState({ preview: '', raw: '' });
+
+  const handleImage = (e) => {
+    setImage({
+      preview: URL.createObjectURL(e.target.files[0]),
+      raw: e.target.files[0]
+    });
+  };
   return (
     <div className='mt-3'>
       <Container maxWidth='sm'>
@@ -36,9 +45,16 @@ const UpdateProfile = () => {
             Update Profile
           </Box>
           <img
-            src={Profile}
+            src={image.preview ? image.preview : Profile}
             alt='proffile'
             style={{ height: '150px', width: '150px', borderRadius: '200px' }}
+          />
+          <input
+            accept='image/*'
+            id='contained-button-file'
+            multiple
+            type='file'
+            onChange={handleImage}
           />
         </div>
         <div>
